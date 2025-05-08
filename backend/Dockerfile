@@ -1,18 +1,15 @@
-
-# Etapa base
 FROM node:18
 
-# Criar diretório de trabalho
 WORKDIR /app
 
-# Copiar arquivos do projeto
 COPY package*.json ./
 RUN npm install
 
 COPY . .
 
-# Expor a porta padrão da aplicação
-EXPOSE 3000
+# ✅ Cloud Run exige expor a 8080
+EXPOSE 8080
 
-# Comando de execução
+# ✅ Use a variável de ambiente PORT (será 8080)
 CMD [ "node", "index.js" ]
+
