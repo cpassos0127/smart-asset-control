@@ -5,8 +5,11 @@ app.get('/', (req, res) => {
   res.send('API Smart Asset Control funcionando!');
 });
 
-const PORT = process.env.PORT || 3000;
+// AQUI É O PONTO CRÍTICO 👇
+const PORT = process.env.PORT || 8080;
+
 app.listen(PORT, () => {
   console.log(`Servidor rodando na porta ${PORT}`);
 });
+
 
