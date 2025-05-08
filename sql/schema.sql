@@ -1,0 +1,1 @@
+-- exemplo: CREATE TABLE empresas (...);
